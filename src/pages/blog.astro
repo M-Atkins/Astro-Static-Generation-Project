@@ -1,14 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+const posts = await Astro.glob('../posts/*.md')
 ---
 
 <html>
     <Layout title='Blog'>
         <div class="main">
             <h1>Blog</h1>
-        </div>
 
+
+        {posts.map(post => (
+            <div style="border-bottom: 1px dotted white;">
+            <p>{post.frontmatter.title}</p>
+            <p>{post.frontmatter.excerpt}</p>
+        </div>
+        ))}
+                </div>
     </Layout>
 </html>
 
