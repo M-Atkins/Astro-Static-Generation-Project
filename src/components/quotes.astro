@@ -1,5 +1,16 @@
+---
 
+const response = await fetch('https://type.fit/api/quotes')
+const data = await response.json()
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+let randomquote = data[getRandomInt(9)]
+// console.log(data[getRandomInt(9)])
+---
 <html>
     <!-- Use JSON api to gather random quotes? -->
-    <p> Placeholder </p>
+    <p> {randomquote.text} </p>
+    <!-- <p> {randomquote.author} </p> -->
 </html>
