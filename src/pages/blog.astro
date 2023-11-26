@@ -9,14 +9,20 @@ const posts = await Astro.glob('../posts/*.md')
         <div class="main">
             <h1>Blog</h1>
 
-
+        <div style="border-bottom: 1px dotted white"></div>
         {posts.map(post => (
             <div style="border-bottom: 1px dotted white;">
-
-            <a href={post.frontmatter.slug}><p>{post.frontmatter.title}</p></a>
+                <div style="display: flex;">
+                    <a style="color:white;" href={post.frontmatter.slug}><h3>{post.frontmatter.title}</h3></a>
+                    <p style="margin-left: auto;">{new Date(post.frontmatter.date).toLocaleDateString()}</p>
+                </div>
+                <a>(</a>
+            {post.frontmatter.tags.map(tag =>(
+            <a>{tag},</a>
+            ))}
+            <a>)</a>
             <p>{post.frontmatter.excerpt}</p>
-            <p>{post.frontmatter.date}</p>
-            <p>{post.frontmatter.tags}</p>
+
         </div>
         ))}
                 </div>
@@ -25,6 +31,8 @@ const posts = await Astro.glob('../posts/*.md')
 
 <style>
     .main {
-        padding: 50px
+        margin: 20%;
+        margin-top: auto;
+        mawrgin-bottom: auto;
     }
 </style>

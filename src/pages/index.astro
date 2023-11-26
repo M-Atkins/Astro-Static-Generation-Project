@@ -8,30 +8,31 @@ import Quotes from '../components/quotes.astro';
 <Layout title="speeg.me">
 	
 	
-	<!-- <script type="module" src="src/scripts/main.js"></script> -->
+	<script type="module" src="src/scripts/main.js"></script>
 	
 	<h1 class="center">SPEEGHOST</h1>
 	
 	<div class="center"><Quotes /></div>
-	<!-- <div class="center" style="margin-bottom: 10px;">
-		<img class="center" src="src/media/bonsai.png" style="display:block; width: auto; height: auto; max-height: 20em;" alt="">
-	</div> -->
-	<div class="intro center" style="padding: 10px; margin-bottom: 10px;">
-		<p>Hi, I'm Matt. I like to make fun stuff on the web.</p>
+	<div class="center" style="margin-bottom: 10px;">
+		<!-- <img class="center" src="src/media/bonsai.png" style="display:block; width: auto; height: auto; max-height: 20em;" alt=""> -->
+		<!-- <div class="center" style="width: 200px" id="threediv"></div> -->
+	</div>
+	<div class="intro center" style="padding: 10px; margin-bottom: 10px; max-width: 500px;">
+		<p>Hi, I'm Matt. A Computer Science graduate from the United Kingdom (UK badge here) and part-time freelance Software Dev/ Full time tinkerer. 
+			I love to try and make my thoughts a reality. I've been through multiple variations of this portfolio site, but the happiest I ever was with the website
+			was when it was fast, simple and efficient. Don't you miss web1? </p>
 	</div>
 
-	<div class="intro center" style="text-align: left;">
+	<div class="intro center" style="text-align: left; max-width: 500px;">
 		<ul>
-			<li>links: <a href="linkme">linkme</a></li>
-			<li>links: <a href="linkme">linkme</a></li>
-			<li>links: <a href="linkme">linkme</a></li>
-			<li>links: <a href="linkme">linkme</a></li>
+			<li>Github: <a href="linkme">linkme</a></li>
+			<li>LinkedIn: <a href="linkme">linkme</a></li>
 		</ul>
 	</div>
 	<p class="center">buttons!</p>
 	<!-- I want this div to read from a directory of badges - either have filesnames as links or text files with matching names containing urls -->
-	<div class="flex center">
-		<!-- <img src="src/media/linux.gif" alt="">
+	<!-- TODO: Two Column Grid for alignment -->
+	<div class="flex center" style="max-width: 390px;">
 		<img src="src/media/linux.gif" alt="">
 		<img src="src/media/linux.gif" alt="">
 		<img src="src/media/linux.gif" alt="">
@@ -39,7 +40,8 @@ import Quotes from '../components/quotes.astro';
 		<img src="src/media/linux.gif" alt="">
 		<img src="src/media/linux.gif" alt="">
 		<img src="src/media/linux.gif" alt="">
-		<img src="src/media/linux.gif" alt=""> -->
+		<img src="src/media/linux.gif" alt="">
+		<img src="src/media/linux.gif" alt="">
 	</div>
 
 	<p class="center">Inspired by <a href="https://fleepy.tv">fleepy.tv</a></p>
@@ -56,6 +58,11 @@ import Quotes from '../components/quotes.astro';
 		background-color: purple;
 		
 		border: 2px solid black;
+	}
+
+	canvas {
+		width: 50%;
+		height: 90px;
 	}
 	
 </style>
